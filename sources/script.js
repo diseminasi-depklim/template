@@ -1,11 +1,4 @@
-// var swiper = new Swiper(".mySwiper", {
-//   slidesPerView: 4,
-//   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+// SWIPER JS
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2, // default untuk mobile
@@ -22,6 +15,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// KEYFRAMES PADA NAVBAR
 document.querySelectorAll(".dropdown").forEach(function (dropdown) {
   dropdown.addEventListener("show.bs.dropdown", function (e) {
     const menu = this.querySelector(".dropdown-menu");

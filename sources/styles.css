@@ -266,3 +266,46 @@ button {
     font-size: 3.5rem;
   }
 }
+
+/* Keyframes animasi fade + slide */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gaya awal dropdown desktop */
+@media (min-width: 768px) {
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    animation: fadeSlideDown 0.3s ease forwards;
+  }
+}
+
+/* Untuk mobile tetap default Bootstrap */
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    position: static !important;
+    animation: none !important;
+  }
+}

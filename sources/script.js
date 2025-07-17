@@ -21,3 +21,19 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+  dropdown.addEventListener("show.bs.dropdown", function (e) {
+    const menu = this.querySelector(".dropdown-menu");
+    if (window.innerWidth >= 768) {
+      setTimeout(() => menu.classList.add("show"), 10);
+    }
+  });
+
+  dropdown.addEventListener("hide.bs.dropdown", function (e) {
+    const menu = this.querySelector(".dropdown-menu");
+    if (window.innerWidth >= 768) {
+      menu.classList.remove("show");
+    }
+  });
+});

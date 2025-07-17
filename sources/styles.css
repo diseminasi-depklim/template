@@ -153,6 +153,15 @@ button {
   object-fit: cover;
 } */
 
+/* ACCORDION TABS 
+-------------------------------------------------- */
+.content-accordion-tabs {
+  text-align: justify;
+}
+
+.btn-accordion:active {
+  background-color: var(--primary-color);
+}
 /* FOOTER 
 -------------------------------------------------- */
 

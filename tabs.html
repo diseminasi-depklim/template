@@ -40,7 +40,9 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md sticky-top shadow p-3 bg-body-tertiary">
+    <nav
+      class="navbar navbar-expand-md sticky-top shadow p-3 nav-utama bg-body-tertiary"
+    >
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img
@@ -70,9 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -92,11 +92,32 @@
                 <li>
                   <a class="dropdown-item" href="details.html">Details</a>
                 </li>
-
                 <li>
-                  <a class="dropdown-item" href="faq.html"
-                    >Something else here</a
+                  <a class="dropdown-item" href="tabs.html">Tabs</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="breadcrumbs.html"
+                    >Breadcrumbs</a
                   >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="cards.html">Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="circle-card.html"
+                    >Circle Cards</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="cards.html">Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="featurette.html"
+                    >Featurettes</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="faq.html">FAQ</a>
                 </li>
               </ul>
             </li>
@@ -145,262 +166,384 @@
 
     <!-- MAIN CONTENT -->
     <main>
-      <!-- CAROUSEL -->
-      <div
-        id="myCarousel"
-        class="carousel carousel-fade slide mb-6"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="overlay"></div>
-            <img src="assets/images/anspi1.jpg" alt="" class="img-fluid" />
-            <div class="container">
-              <a href="#" target="_blank">
-                <div class="carousel-caption p-2 opacity-75">
-                  <h1>Example headline.</h1>
-                  <p class="opacity-75">
-                    Some representative placeholder content for the first slide
-                    of the carousel.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="overlay"></div>
-
-            <img
-              src="assets/images/PDCHT_latest.jpg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="container">
-              <a href="#" target="_blank">
-                <div class="carousel-caption p-2 opacity-75">
-                  <h1>Another example headline.</h1>
-                  <p>
-                    Some representative placeholder content for the second slide
-                    of the carousel.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="overlay"></div>
-
-            <img src="assets/images/PDKM_latest.jpg" alt="" class="img-fluid" />
-
-            <div class="container">
-              <a href="#" target="_blank">
-                <div class="carousel-caption p-2 opacity-75">
-                  <h1>One more for good measure.</h1>
-                  <p>
-                    Some representative placeholder content for the third slide
-                    of this carousel.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev z-index-3"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
+      <div class="container accordion-tab-wrapper mt-3 p-2 card shadow">
+        <ul
+          class="nav nav-pills nav-fill mb-3 d-flex align-items-center"
+          id="pills-tab"
+          role="tablist"
         >
-          <span
-            class="carousel-control-prev-icon z-index-1"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next z-index-3"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+          <li class="nav-item" role="presentation">
+            <!-- button -->
+            <button
+              class="nav-link btn-accordion"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              Home
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link btn-accordion"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              Profile
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link btn-accordion"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              Contact
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link btn-accordion"
+              id="pills-disabled-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-disabled"
+              type="button"
+              role="tab"
+              aria-controls="pills-disabled"
+              aria-selected="false"
+            >
+              Another
+            </button>
+          </li>
+        </ul>
 
-      <!-- SWIPER JS -->
-      <hr class="container" />
-      <h1 class="title-section text-center m-2">Swiper Categories</h1>
-      <h5 class="subtitle-section text-center m-4">subtitle di sini</h5>
-      <div class="swiper mySwiper container">
-        <div class="swiper-wrapper">
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-hail-fill fs-1"></i><br />
-              <span>Agriculture</span>
+        <!-- content -->
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active p-3"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/anspi1.jpg"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">Penjelasan 1</h1>
+              <p class="content-accordion-tabs p-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
             </div>
-          </a>
-
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-hail-fill fs-1"></i><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-moon-fill fs-1"></i><br /><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-hail-fill fs-1"></i><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-hail-fill fs-1"></i><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-moon-fill fs-1"></i><br /><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-hail-fill fs-1"></i><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-hail-fill fs-1"></i><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-          <a href="" target="_blank" class="swiper-slide shadow">
-            <div>
-              <i class="bi bi-cloud-moon-fill fs-1"></i><br /><br />
-              <span>Agriculture</span>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-      <!-- Header-->
-      <header class="py-5">
-        <div class="container px-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 col-xxl-6">
-              <div class="text-center my-5">
-                <h1 class="fw-bolder mb-3">
-                  Our mission is to make building websites easier for everyone.
-                </h1>
-                <p class="lead fw-normal text-muted mb-4">
-                  Start Bootstrap was built on the idea that quality, functional
-                  website templates and themes should be available to everyone.
-                  Use our open source, free products, or support us by
-                  purchasing one of our premium products or services.
-                </p>
-                <a class="btn btn-primary btn-lg" href="#scroll-target"
-                  >Read our story</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Team members section-->
-      <section class="py-5 bg-light">
-        <div class="container px-5 my-5">
-          <div class="text-center">
-            <h2 class="fw-bolder">Our team</h2>
-            <p class="lead fw-normal text-muted mb-5">
-              Dedicated to quality and your success
-            </p>
           </div>
           <div
-            class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center"
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+            tabindex="0"
           >
-            <div class="col mb-5 mb-5 mb-xl-0">
-              <div class="text-center">
-                <img
-                  class="img-fluid rounded-circle mb-4 px-4"
-                  src="https://dummyimage.com/150x150/ced4da/6c757d"
-                  alt="..."
-                />
-                <h5 class="fw-bolder">Ibbie Eckart</h5>
-                <div class="fst-italic text-muted">Founder &amp; CEO</div>
-              </div>
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/PDCHT_latest.jpg"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">Penjelasan 2</h1>
+              <p class="content-accordion-tabs p-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
             </div>
-            <div class="col mb-5 mb-5 mb-xl-0">
-              <div class="text-center">
-                <img
-                  class="img-fluid rounded-circle mb-4 px-4"
-                  src="https://dummyimage.com/150x150/ced4da/6c757d"
-                  alt="..."
-                />
-                <h5 class="fw-bolder">Arden Vasek</h5>
-                <div class="fst-italic text-muted">CFO</div>
-              </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/PDKM_latest.jpg"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">Penjelasan</h1>
+              <p class="content-accordion-tabs p-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
             </div>
-            <div class="col mb-5 mb-5 mb-sm-0">
-              <div class="text-center">
-                <img
-                  class="img-fluid rounded-circle mb-4 px-4"
-                  src="https://dummyimage.com/150x150/ced4da/6c757d"
-                  alt="..."
-                />
-                <h5 class="fw-bolder">Toribio Nerthus</h5>
-                <div class="fst-italic text-muted">Operations Manager</div>
-              </div>
-            </div>
-            <div class="col mb-5">
-              <div class="text-center">
-                <img
-                  class="img-fluid rounded-circle mb-4 px-4"
-                  src="https://dummyimage.com/150x150/ced4da/6c757d"
-                  alt="..."
-                />
-                <h5 class="fw-bolder">Malvina Cilla</h5>
-                <div class="fst-italic text-muted">CTO</div>
-              </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-disabled"
+            role="tabpanel"
+            aria-labelledby="pills-disabled-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/youtube-post.png"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">
+                Penjelasan Another
+              </h1>
+              <p class="content-accordion-tabs p-2 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div class="container accordion-tab-wrapper2 mt-3 p2 card shadow">
+        <ul
+          class="nav nav-tabs m-3 justify-content-around"
+          id="myTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              Home
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              Profile
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#contact-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="contact-tab-pane"
+              aria-selected="false"
+            >
+              Contact
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="disabled-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#disabled-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="disabled-tab-pane"
+              aria-selected="false"
+            >
+              Disabled
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/anspi1.jpg"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">
+                Penjelasan Another
+              </h1>
+              <p class="content-accordion-tabs p-2 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile-tab-pane"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/PDCHT_latest.jpg"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">
+                Penjelasan Another
+              </h1>
+              <p class="content-accordion-tabs p-2 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="contact-tab-pane"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/PDKM_latest.jpg"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">
+                Penjelasan Another
+              </h1>
+              <p class="content-accordion-tabs p-2 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="disabled-tab-pane"
+            role="tabpanel"
+            aria-labelledby="disabled-tab"
+            tabindex="0"
+          >
+            <div class="accordion-tabs-content">
+              <img
+                src="assets/images/youtube-post.png"
+                alt=""
+                class="img-fluid p-2"
+              />
+              <h1 class="title-accordion-tabs m-3 text-center">
+                Penjelasan Another
+              </h1>
+              <p class="content-accordion-tabs p-2 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                error, ullam neque molestias fuga, laboriosam omnis debitis
+                repellat nesciunt atque quisquam ab quo perferendis doloremque
+                quam. Quia vero veritatis vel! Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quis laborum commodi error fuga
+                sequi quia modi nam, eum itaque nostrum nemo recusandae illo
+                ipsa obcaecati est accusamus sint voluptatem libero. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Error impedit
+                quasi magnam quibusdam esse consequuntur illo voluptate
+                distinctio? Vitae, accusamus. Corporis odit architecto sunt,
+                aspernatur nisi quia iusto eius beatae.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -480,5 +623,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="sources/script.js"></script>
+    <script src="vendor/dist/jquery-3.7.1.min.js"></script>
   </body>
 </html>

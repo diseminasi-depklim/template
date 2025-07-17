@@ -1,0 +1,203 @@
+/* GLOBAL STYLES 
+-------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+}
+
+a,
+li,
+u {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #13124b;
+  --secondary-color: #90cbec;
+  --tertiary-color: #32a767;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+body {
+  color: rgb(var(--dark-color));
+  /* font-family: "League Spartan", sans-serif; */
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+button {
+  z-index: 100;
+}
+
+/* NAVBAR 
+-------------------------------------------------- */
+.standar-waktu {
+  font-size: 0.8rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+nav {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  font-size: 1rem;
+  height: 65px;
+}
+.text-logo {
+  font-size: 1rem;
+}
+
+.dropdown-menu {
+  border-radius: 0%;
+  border: none;
+  background-color: var(--light-color);
+  /* width: 200vh; */
+  position: absolute;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* CAROUSEL 
+-------------------------------------------------- */
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 100;
+  font-weight: bolder;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}
+
+.carousel-item {
+  height: 80vh;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(8, 13, 21, 0.349);
+  /* background-color: var(--light-color); */
+}
+
+/* CARDS CATEGORIES
+-------------------------------------------------- */
+.cards-categories .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cards-categories .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+/* SWIPER JS 
+-------------------------------------------------- */
+
+.swiper {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 2rem;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  height: 200px;
+  font-size: 10px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--light-color);
+}
+
+.swiper-slide i {
+  font-size: 4rem;
+  top: 0;
+}
+.swiper-slide span {
+  font-size: 1rem;
+}
+
+.swiper-slide:hover {
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+  color: var(--primary-color) !important;
+}
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* FOOTER 
+-------------------------------------------------- */
+
+.footer-custom {
+  background-color: var(--secondary-color);
+  color: #333;
+}
+
+.footer-custom a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-custom a:hover {
+  text-decoration: underline;
+}
+
+.sub-footer {
+  background-color: var(--primary-color);
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
